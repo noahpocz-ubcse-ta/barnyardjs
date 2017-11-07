@@ -5,13 +5,15 @@ class Butterfly extends Critter {
     constructor(props) {
         super(props);
 
-        this.x = 20;
-        this.y = 20;
-
         this.rows = 6;
         this.columns = 14;
         this.imageWidth = 980;
         this.imageHeight = 390;
+
+        this.direction = 1;
+        this.speed = 2.3;
+        this.x = 10;
+        this.y = 100;
 
         this.sx = 0;
         this.sy = 0;
