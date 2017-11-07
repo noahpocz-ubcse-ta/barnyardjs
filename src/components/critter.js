@@ -9,6 +9,9 @@ class Critter {
         this.tick = this.tick.bind(this);
         this.draw = this.draw.bind(this);
 
+        this.x = 140;
+        this.y = 140;
+
         if (animalType == 'pig') {
             this.sx=3;
             this.sy=6;
@@ -54,7 +57,7 @@ class Critter {
         var ctx = canvas.getContext('2d');
         var critterImage = document.getElementById('source');
         ctx.clearRect(0,0,1000,1000);
-        ctx.drawImage(critterImage,this.sx,this.sy,this.sw,this.sh,this.dx,200,this.sw,this.sh);
+        ctx.drawImage(critterImage,this.sx,this.sy,this.sw,this.sh,this.x,this.y,this.sw,this.sh);
     }
 }
 
