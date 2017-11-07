@@ -5,6 +5,14 @@
   background-color: #e6e6e6;
 }
 
+.soft-window {
+  border-radius: 7px;
+  overflow: hidden;
+
+  width: 500px;
+  height: 500px;
+}
+
 .fill {
   width: 100%;
   height: 100%;

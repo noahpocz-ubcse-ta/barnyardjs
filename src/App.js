@@ -29,8 +29,13 @@ class App extends Component {
   }
 
   componentDidMount() {
+
     this.canvas = document.getElementById('barnyard');
     this.ctx = this.canvas.getContext('2d');
+
+    // resize canvas properly
+    this.canvas.width = this.canvas.offsetWidth;
+    this.canvas.height = this.canvas.offsetHeight;
 
     this.critters.push(new Chicken());
     this.critters.push(new Butterly());
@@ -57,13 +62,13 @@ class App extends Component {
         <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
 
           <img id="terrain-image" alt='terrain' src={terrainImage} style={srcImageStyle} />
-          <img id="butterfly-image" alt='me' src={butterflyImage} style={ srcImageStyle } />
-          <img id="chicken-image" alt='me' src={chickenImage} style={ srcImageStyle } />
-          <img id="pig-image" alt='me' src={pigImage} style={ srcImageStyle } />
+          <img id="butterfly-image" alt='butterly' src={butterflyImage} style={ srcImageStyle } />
+          <img id="chicken-image" alt='chicken' src={chickenImage} style={ srcImageStyle } />
+          <img id="pig-image" alt='pig' src={pigImage} style={ srcImageStyle } />
 
-          <Card>
-            <canvas id="barnyard" width = "500" height = "300" />
-          </Card>
+          <div id='barnyard-window' className="soft-window">
+            <canvas id='barnyard' style={{ width: '100%', height: '100%' }}/>
+          </div>
 
         </div>
       </div>
