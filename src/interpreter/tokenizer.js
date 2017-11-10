@@ -8,7 +8,7 @@ const tokens = {
     dot: /\./
 }
 
-export const tokenize = function(string) {
+const tokenize = function(string) {
     const output = []
 
     let previousMatches = []
@@ -60,3 +60,6 @@ export const tokenize = function(string) {
 
     return output
 }
+
+const s = "BarnYard b = new BarnYard()"
+console.log(JSON.stringify(tokenize(s)))
