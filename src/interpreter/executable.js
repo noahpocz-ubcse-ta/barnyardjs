@@ -2,9 +2,9 @@ class Executable {
 
     constructor(){
         this.BarnYard = [];
-        this.Chickens = {};
-        this.Pigs = {};
-        this.Butterflys = {};
+        this.Chickens = [];
+        this.Pigs = [];
+        this.Butterflys = [];
     }
 
     start(){
@@ -12,42 +12,47 @@ class Executable {
     }
 
     newBarnYard(barnyard){
-        B = barnyard;
+        if(this.BarnYard.length <= 1 && this.BarnYard.length >= 0){
+           this.BarnYard.push(barnyard); 
+        }else{
+            document.write('Sorry, one only please');
+        }
+        
     }
 
     newChicken(chicken){
-        c = chicken;
+        this.Chickens.push(chicken);
     }
 
     newPig(pig){
-        p = pig;
+        this.Pigs.push(pig);
     }
 
     newButterfly(butterfly){
-        b = butterfly;
+        this.Butterflys.push(butterfly);
     }
 
     addChicken(c){
-        this.BarnYard.push(c);
+        this.BarnYard.push(this.Chickens);
     }
 
     addPig(){
-        this.BarnYard.push(p);
+        this.BarnYard.push(this.Pigs);
     }
 
     addButterfly(){
-        this.BarnYard.push(b);
+        this.BarnYard.push(this.Butterflys);
     }
 
     removeChicken(){
-        this.BarnYard.pop(c);
+        this.BarnYard.pop(this.Chickens);
     }
 
     removePig(){
-        this.BarnYard.pop(p);
+        this.BarnYard.pop(this.Pigs);
     }
 
     removeButterfly(){
-
+        this.BarnYard.pop(this.Butterflys);
     }
 }
